@@ -29,5 +29,5 @@ cd ../../
 
 # Build cables core and Web Service
 cd ${CABLES_REPO}/${CABLES_CORE_DIR}
-mvn clean package wildfly:install
+mvn clean package install
 cd ../../
