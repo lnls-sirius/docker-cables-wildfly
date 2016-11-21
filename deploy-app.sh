@@ -9,5 +9,4 @@ set -e
 
 # Copy files to correct locations
 cp ${CABLES_CORE_TARGET_WAR} /deploy
-cp ${CABLES_WS_TARGET_WAR} /deploy
 cp postgresql-${POSTGRES_VERSION}.jar /deploy
