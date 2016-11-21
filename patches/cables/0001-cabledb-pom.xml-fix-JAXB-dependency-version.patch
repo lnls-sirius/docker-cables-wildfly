@@ -1,15 +1,14 @@
-From df00e2594f97c36684ce41d741715a48a1d19de1 Mon Sep 17 00:00:00 2001
+From 41945fdde31108e9ea923a68b1d9c782a2587291 Mon Sep 17 00:00:00 2001
 From: Lucas Russo <lerwys@gmail.com>
-Date: Fri, 18 Nov 2016 15:24:29 -0200
-Subject: [PATCH] cabledb/pom.xml: match JAXB component version to our current
- one
+Date: Mon, 21 Nov 2016 10:37:48 -0200
+Subject: [PATCH] cabledb/pom.xml: fix JAXB dependency version
 
 ---
  cabledb/pom.xml | 16 ++++++++--------
  1 file changed, 8 insertions(+), 8 deletions(-)
 
 diff --git a/cabledb/pom.xml b/cabledb/pom.xml
-index a35b603..de7b17f 100644
+index b2141b6..6b97a4a 100644
 --- a/cabledb/pom.xml
 +++ b/cabledb/pom.xml
 @@ -14,9 +14,9 @@
@@ -38,7 +37,7 @@ index a35b603..de7b17f 100644
  		<dependency>
  			<groupId>org.openepics</groupId>
  			<artifactId>cable-jaxb</artifactId>
--			<version>1.2.8-SNAPSHOT</version>
+-			<version>1.3.1-SNAPSHOT</version>
 +			<version>1.3.1</version>
  		</dependency>
  		<dependency>
