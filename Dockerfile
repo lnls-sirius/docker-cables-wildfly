@@ -54,5 +54,8 @@ WORKDIR /
 # Deploy everything
 RUN mv /deploy/* /opt/jboss/wildfly/standalone/deployments/
 
+# Expose HTTPS external port
+EXPOSE 8090
+
 # Switch back to jboss user
 USER jboss
