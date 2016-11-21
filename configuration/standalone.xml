@@ -165,31 +165,31 @@
                         <password>sa</password>
                     </security>
                 </datasource>
-                <xa-datasource jndi-name="java:/org.openepics.discs.conf.data"
-                    pool-name="org.openepics.discs.conf.data" enabled="true"
-                    use-ccm="false">
+                <xa-datasource jndi-name="java:/org.openepics.cable.data"
+                    pool-name="org.openepics.cable.data"
+                    enabled="true" use-ccm="false">
                     <xa-datasource-property name="DatabaseName">cabledb</xa-datasource-property>
                     <xa-datasource-property name="PortNumber">5432</xa-datasource-property>
                     <xa-datasource-property name="ServerName">cables-postgres</xa-datasource-property>
                     <xa-datasource-class>org.postgresql.xa.PGXADataSource</xa-datasource-class>
                     <!-- <driver>postgresql</driver> -->
                     <driver>postgresql-9.4.1207.jar</driver>
-                    <xa-pool>
-                        <is-same-rm-override>false</is-same-rm-override>
-                        <interleaving>false</interleaving>
+	                <xa-pool>
+	                    <is-same-rm-override>false</is-same-rm-override>
+	                    <interleaving>false</interleaving>
                         <pad-xid>false</pad-xid>
-                        <wrap-xa-resource>false</wrap-xa-resource>
-                    </xa-pool>
-                    <security>
-                        <user-name>cabledb</user-name>
-                        <password>cabledb</password>
-                    </security>
-                    <validation>
-                        <validate-on-match>false</validate-on-match>
-                        <background-validation>false</background-validation>
-                    </validation>
+	                    <wrap-xa-resource>false</wrap-xa-resource>
+	                </xa-pool>
+	                <security>
+	                    <user-name>cabledb</user-name>
+	                    <password>cabledb</password>
+	                </security>
+	                <validation>
+	                    <validate-on-match>false</validate-on-match>
+	                    <background-validation>false</background-validation>
+	                </validation>
                     <statement>
-                        <share-prepared-statements>false</share-prepared-statements>
+	                    <share-prepared-statements>false</share-prepared-statements>
                     </statement>
                 </xa-datasource>
                 <drivers>
