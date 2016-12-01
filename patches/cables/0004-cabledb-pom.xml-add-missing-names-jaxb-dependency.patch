@@ -17,12 +17,12 @@ index 6b97a4a..c9219f5 100644
  		<dependency>
 +			<groupId>org.openepics</groupId>
 +			<artifactId>names-jaxb</artifactId>
-+			<version>[3.0.3,)</version>
++			<version>3.0.3</version>
 +		</dependency>
 +		<dependency>
  			<groupId>se.esss.ics.rbac</groupId>
  			<artifactId>dsaccess-ldap</artifactId>
  			<version>[2.0.0,)</version>
--- 
+--
 1.9.1
 
