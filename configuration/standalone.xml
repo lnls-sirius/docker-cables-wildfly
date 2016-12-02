@@ -43,11 +43,11 @@
 
         <property name="cable.BlobStoreRoot" value="$JBOSS_HOME/standalone/blobStore" />
         <!-- <property name="cable.cableNumberingDocumentURL" value="https://chess.esss.lu.se/enovia/tvc-ation/showObject/dmg_AssignmentSpecification/ESS-0015420/1"/> -->
-        <property name="cable.cableUserManualURL" value="http://localhost:8080/documents/cable/Cable Database User Manual.docx"/>
+        <property name="cable.cableUserManualURL" value="http://cables-service:8080/documents/cable/Cable Database User Manual.docx"/>
         <property name="cable.mailNotificationsEnabled" value="false"/>
 
-        <property name="cable.applicationBaseURL" value="http://cable:8080"/>
-        <property name="cable.servicesBaseURL" value="http://cable:8080/rest"/>
+        <property name="cable.applicationBaseURL" value="http://cables-service:8080"/>
+        <property name="cable.servicesBaseURL" value="http://cables-service:8080/rest"/>
     </system-properties>
     <management>
         <security-realms>
