@@ -398,8 +398,6 @@
                     <filter-ref name="server-header"/>
                     <filter-ref name="x-powered-by-header"/>
                 </host>
-                <host name="cable" alias="cable"/>
-                <host name="names" alias="naming"/>
             </server>
             <servlet-container name="default">
                 <jsp-config/>
