@@ -39,6 +39,11 @@
         <property name="rbac.useLocalService" value="false" />
         <!-- <property name="rbac.cookie.domain" value=".esss.lu.se" /> -->
 
+        <property name="rbac.ldapPrimaryHost" value="https://rbac-auth-services:8443/service"/>
+        <property name="rbac.ldapPrimaryPort" value="8443"/>
+        <property name="rbac.ldapSecondaryHost" value="https://localhost:8443/service"/>
+        <property name="rbac.ldapSecondaryPort" value="8443"/>
+
         <property name="names.servicesBaseURL" value="http://naming-service-wildfly:8080/names/rest" />
 
         <property name="cable.BlobStoreRoot" value="$JBOSS_HOME/standalone/blobStore" />
