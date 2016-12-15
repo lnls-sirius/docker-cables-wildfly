@@ -39,11 +39,43 @@
         <property name="rbac.useLocalService" value="false" />
         <!-- <property name="rbac.cookie.domain" value=".esss.lu.se" /> -->
 
+        <!-- RBAC properties -->
         <property name="rbac.ldapPrimaryHost" value="ad1.abtlus.org.br"/>
         <property name="rbac.ldapPrimaryPort" value="389"/>
         <property name="rbac.ldapSecondaryHost" value="ad2.abtlus.org.br"/>
         <property name="rbac.ldapSecondaryPort" value="389"/>
+        <property name="rbac.ldapTimeout" value="7000"/>
+        <!-- The Security principal of a default user, who is allowed to perform searches on the LDAP. -->
+        <!-- If anonymous searches are allowed on the server, you can remove these two settings -->
+        <property name="rbac.ldapSecurityPrincipal" value="CN\=rbac,OU\=Users,OU=\LNLS,DC\=abtlus,DC\=org,DC\=br"/>
         <property name="rbac.ldapSecurityCredentials" value="LDAP_CREDENTIALS"/>
+
+        <!-- the Dn to use for searching -->
+        <property name="rbac.ldapSearchName" value="DC\=abtlus,DC\=org,DC\=br"/>
+        <!-- The filters to be used when searching by username, first name, and last name -->
+        <property name="rbac.ldapSearchFilterUsername" value="(sAMAccountName\={0})"/>
+        <property name="rbac.ldapSearchFilterFirstName" value="(givenName\={0})"/>
+        <property name="rbac.ldapSearchFilterLastName" value="(sn\={0})"/>
+        <!-- When doing search filter the entries with this parameter to get only the users -->
+        <property name="rbac.ldapSearchFilterObject" value="(objectCategory\=CN\=Person,CN\=Schema,CN\=Configuration,DC\=abtlus,DC\=org,DC\=br)(objectClass\=user)"/>
+        <!-- The page size to perform searches for all users. -->
+        <!-- Some servers have a hard limit of 1000 entries, which in most cases is not enough -->
+        <!-- to retrieve the list of all users. By defining the page size parameter greater than 0 -->
+        <!-- a paged search will be performed, requesting the entries in pages of the given size. -->
+        <property name="rbac.ldapSearchPageSize" value="300"/>
+
+        <!-- The attributes which contain information that the DSAccess requires. If a piece of information -->
+        <!-- is not available in your LDAP, you can leave the entry blank and it will not be used -->
+        <property name="rbac.ldapAttrUsername" value="samaccountname"/>
+        <property name="rbac.ldapAttrFirstName" value="givenname"/>
+        <property name="rbac.ldapAttrMiddleName" value=""/>
+        <property name="rbac.ldapAttrLastName" value="sn"/>
+        <property name="rbac.ldapAttrGroup" value="department"/>
+        <property name="rbac.ldapAttrGroupFilter" value="OU\=Users,OU\=LNLS,DC\=abtlus,DC\=org,DC\=br"/>
+        <property name="rbac.ldapAttrEMail" value="mail"/>
+        <property name="rbac.ldapAttrPhone" value="telephonenumber"/>
+        <property name="rbac.ldapAttrMobile" value="mobile"/>
+        <property name="rbac.ldapAttrLocation" value=""/>
 
         <property name="names.servicesBaseURL" value="http://naming-service-wildfly:8080/names/rest" />
 
