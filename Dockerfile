@@ -48,6 +48,9 @@ RUN echo nameserver 10.0.0.71 >> /etc/resolv.conf && \
     rm -rf /root/.m2 && \
     rm -rf /build/*
 
+# Copy another entrypoint for user use
+COPY scripts/docker-entrypoint.sh /
+
 # Change to root directory
 WORKDIR /
 

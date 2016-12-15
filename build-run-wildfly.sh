@@ -4,6 +4,8 @@ set -a
 set -e
 set -u
 
+LDAP_CREDENTIALS="$1"
+
 # Source env vars
 . ./env-vars.sh
 
@@ -14,4 +16,4 @@ set -u
 ./create-net.sh ${NET_NAME}
 
 # Run postgres
-./run-wildfly.sh
+./run-wildfly.sh ${LDAP_CREDENTIALS}
