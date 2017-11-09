@@ -1,0 +1,28 @@
+From 3178bd72a527937b4caf5fb7c4f3400fcaa21330 Mon Sep 17 00:00:00 2001
+From: Lucas Russo <lerwys@gmail.com>
+Date: Thu, 1 Dec 2016 11:21:44 -0200
+Subject: [PATCH] cabledb/pom.xml: add missing names-jaxb dependency
+
+---
+ cabledb/pom.xml | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/cabledb/pom.xml b/cabledb/pom.xml
+index 6b97a4a..c9219f5 100644
+--- a/cabledb/pom.xml
++++ b/cabledb/pom.xml
+@@ -112,6 +112,11 @@
+ 			<version>[3.0.3,)</version>
+ 		</dependency>
+ 		<dependency>
++			<groupId>org.openepics</groupId>
++			<artifactId>names-jaxb</artifactId>
++			<version>3.0.3</version>
++		</dependency>
++		<dependency>
+ 			<groupId>se.esss.ics.rbac</groupId>
+ 			<artifactId>dsaccess-ldap</artifactId>
+ 			<version>[2.0.0,)</version>
+--
+1.9.1
+

@@ -1,0 +1,36 @@
+From e8624506a12267c44ee9cd0d380da60ee9d5dca7 Mon Sep 17 00:00:00 2001
+From: Lucas Russo <lerwys@gmail.com>
+Date: Mon, 21 Nov 2016 15:43:43 -0200
+Subject: [PATCH] cabledb/*/persistence.xml: auto-create schema on first run
+
+---
+ cabledb/src/main/resources/META-INF/persistence.xml | 11 +++++------
+ 1 file changed, 5 insertions(+), 6 deletions(-)
+
+diff --git a/cabledb/src/main/resources/META-INF/persistence.xml b/cabledb/src/main/resources/META-INF/persistence.xml
+index ce381dc..091a6e6 100644
+--- a/cabledb/src/main/resources/META-INF/persistence.xml
++++ b/cabledb/src/main/resources/META-INF/persistence.xml
+@@ -5,14 +5,13 @@
+     <jta-data-source>java:/org.openepics.cable.data</jta-data-source>
+     <exclude-unlisted-classes>false</exclude-unlisted-classes>
+     <validation-mode>NONE</validation-mode>
+-    
++
+     <!-- Use for development purposes only -->
+-    
+-  <!--
+-      <properties>
++
++    <properties>
+         <property name="hibernate.hbm2ddl.auto" value="update"/>
++        <property name="hibernate.enable_lazy_load_no_trans" value="true"/>
+     </properties>
+-   -->
+-     
++
+   </persistence-unit>
+ </persistence>
+-- 
+1.9.1
+
