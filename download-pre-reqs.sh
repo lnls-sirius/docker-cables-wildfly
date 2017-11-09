@@ -19,7 +19,7 @@ cd ..
 
 # Apply patches
 cd ${CABLES_REPO}
-git am --ignore-whitespace /build/patches/cables/*
+git am --ignore-whitespace /build/patches/cables/${CABLES_VERSION}/*
 cd ..
 
 # Build flyway
