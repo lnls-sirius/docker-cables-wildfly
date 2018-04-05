@@ -28,6 +28,6 @@ mvn flyway:migrate
 cd ../../
 
 # Build cables core and Web Service
-cd ${CABLES_REPO}/${CABLES_CORE_DIR}
+cd ${CABLES_REPO}/${CABLES_CORE_SERVICE_PATH}
 mvn clean package install
 cd ../../
