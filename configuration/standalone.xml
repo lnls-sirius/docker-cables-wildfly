@@ -77,7 +77,7 @@
         <property name="rbac.ldapAttrMobile" value="mobile"/>
         <property name="rbac.ldapAttrLocation" value=""/>
 
-        <property name="names.servicesBaseURL" value="http://sirius-ns.lnls.br:8080/names/rest" />
+        <property name="names.servicesBaseURL" value="http://sirius-ns.lnls.br:8080/rest" />
 
         <property name="cable.BlobStoreRoot" value="$JBOSS_HOME/standalone/blobStore" />
         <!-- <property name="cable.cableNumberingDocumentURL" value="https://chess.esss.lu.se/enovia/tvc-ation/showObject/dmg_AssignmentSpecification/ESS-0015420/1"/> -->
