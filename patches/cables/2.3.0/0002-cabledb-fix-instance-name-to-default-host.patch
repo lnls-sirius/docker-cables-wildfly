@@ -1,0 +1,25 @@
+From 7fc7211d4d2331d1240a93c21fe7e7e8c242a301 Mon Sep 17 00:00:00 2001
+From: Lucas Russo <lerwys@gmail.com>
+Date: Fri, 4 Jan 2019 10:08:48 -0200
+Subject: [PATCH 2/2] cabledb/*: fix instance name to "default-host"
+
+---
+ cabledb/src/main/webapp/WEB-INF/production/jboss-web.xml | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/cabledb/src/main/webapp/WEB-INF/production/jboss-web.xml b/cabledb/src/main/webapp/WEB-INF/production/jboss-web.xml
+index dbd237c4..1838aa90 100644
+--- a/cabledb/src/main/webapp/WEB-INF/production/jboss-web.xml
++++ b/cabledb/src/main/webapp/WEB-INF/production/jboss-web.xml
+@@ -3,5 +3,5 @@
+   <context-root>/</context-root>
+   <virtual-host>cable</virtual-host>
+   <security-domain>cable.security-domain</security-domain>
+-  <server-instance>default-server_external</server-instance>
+-</jboss-web>
+\ No newline at end of file
++  <server-instance>default-server</server-instance>
++</jboss-web>
+-- 
+2.17.1
+
